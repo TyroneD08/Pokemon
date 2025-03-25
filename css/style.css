@@ -34,8 +34,22 @@ body {
 .card--first{
     grid-row: 1 / 7;
     grid-column: 1 / 5;
-
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
 }
+
+.card--first > input{
+    width: 70%;
+    height: 4rem;
+    font-size: 2rem;
+    font-family: sans-serif;
+    padding-left: 2rem;
+}
+
 
 .card--second{
     grid-column: 5 / 13;
@@ -70,20 +84,4 @@ body {
     background: #ee1515;
     color: #eee;
     border-radius: 0.5rem;
-}
-
-@media screen and (max-width: 87.5rem) {
-    .card--second{
-        grid-row: 1 / 13;
-    }
-    .card--third {
-      grid-column: 1 / 7;
-    } 
-}
-
-@media screen and (max-width: 62.5rem) {
-    .card--first, .card--second{
-        display: none;
-    }
-
 }

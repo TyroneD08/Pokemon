@@ -1,6 +1,7 @@
 const pokemonImage = document.getElementById("js--pokemon-image");
 let randomNumber = Math.floor(Math.random() * 250 + 1);
 
+
 let pokemon = fetch("https://pokeapi.co/api/v2/pokemon/" + randomNumber)
     .then(function (response){
     console.log(response);
@@ -30,6 +31,24 @@ let pokemon = fetch("https://pokeapi.co/api/v2/pokemon/" + randomNumber)
    
  }
 
+const nameText = document.getElementById("js--name");
+let inputField = document.getElementById("js--input");
+inputField.onkeyup = function(event){
+    if(event.keyCode === 13){
+        let name = inputField.value;
 
 
+        let age = fetch("https://api.agify.io?name=" + name)
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(echteData){
+                inputField.style.display = "none";
+                nameText.innerText= echteData.age;
+            });
  
+    }
+}
+
+
+
