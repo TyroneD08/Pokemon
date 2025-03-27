@@ -51,4 +51,20 @@ inputField.onkeyup = function(event){
 }
 
 
+const searchTitle = document.getElementById("js--search-title");
+const searchText = document.getElementById("js--search-text");
+let searchQ = "Hyouka";
+ 
+let searchResult = fetch("https://api.tvmaze.com/search/shows?q=" + searchQ)
+    .then(function(response)
+    {
+        return response.json();
+    })
+    .then(function(realData){
+        searchTitle.innerText = realData[0].show.name;
+        searchText.innerText = realData[0].show.summary.replace(/<\/?p>/g, '');
+    })
+ o
+
+
 
