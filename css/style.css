@@ -54,7 +54,15 @@ body {
 .card--second{
     grid-column: 5 / 13;
     grid-row: 1 / 9;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center
+}
 
+.js--search-text {
+    max-width: 90%;
+    padding: 0 1rem;
 }
 
 .card--third{
@@ -81,7 +89,7 @@ body {
     font-size: 2rem;
     font-family: sans-serif;
     border: none;
-    background: #bfb165;
+    background: #f6d188;
     color: #000000;
     border-radius: 0.5rem;
 }
