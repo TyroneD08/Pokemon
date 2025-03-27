@@ -64,7 +64,6 @@ let searchResult = fetch("https://api.tvmaze.com/search/shows?q=" + searchQ)
         searchTitle.innerText = realData[0].show.name;
         searchText.innerText = realData[0].show.summary.replace(/<\/?p>/g, '');
     })
- o
-
+ 
 
 
